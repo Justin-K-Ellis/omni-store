@@ -6,7 +6,7 @@ const Cart = () => {
     <>
       <PageTitle text="Your Cart" />
       <CartTable />
-      <div className="flex justify-end">
+      <div className="flex justify-end mt-2">
         <button className="btn btn-secondary">Checkout</button>
       </div>
     </>
