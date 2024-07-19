@@ -5,7 +5,7 @@ const NavBar = () => {
     <header>
       <div className="navbar">
         <div className="navbar-start text-3xl text-primary font-bold">
-          Omni Shop
+          <NavLink to="/">Omni Shop</NavLink>
         </div>
         <ul className="navbar-end flex flex-row gap-3 text-2xl">
           <li>
