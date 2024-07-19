@@ -28,7 +28,7 @@ const Card = (props) => {
           <p>Rating: {props.rating}/5</p>
           <div className="card-actions justify-end">
             <button
-              className="btn btn-primary"
+              className="btn btn-secondary"
               onClick={() => handleClick(props)}
             >
               Add to Cart

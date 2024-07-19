@@ -4,11 +4,9 @@ import TableRow from "./TableRow";
 
 const CartTable = () => {
   const [cart, setCart] = useContext(CartContext);
-  console.log(cart);
 
   const totalPrice = cart.reduce((acc, item) => acc + item.price, 0);
   const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
-  console.log("total quant", totalQuantity);
 
   return (
     <div className="overflow-x-auto">
@@ -19,6 +17,7 @@ const CartTable = () => {
             <th>Item</th>
             <th>Quantity</th>
             <th>Price</th>
+            <th>Delete</th>
           </tr>
         </thead>
         {/* body */}
@@ -27,9 +26,11 @@ const CartTable = () => {
             return (
               <TableRow
                 key={item.id}
-                title={item.name}
+                name={item.name}
                 quantity={item.quantity}
                 price={item.price}
+                id={item.id}
+                delText="🗑️"
               />
             );
           })}
@@ -38,6 +39,7 @@ const CartTable = () => {
             title="Order Total"
             quantity={totalQuantity}
             price={totalPrice}
+            delText=""
           />
         </tbody>
       </table>
