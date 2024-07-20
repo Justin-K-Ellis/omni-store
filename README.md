@@ -1,8 +1,21 @@
-# React + Vite
+# Omni Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About
 
-Currently, two official plugins are available:
+This is a frontend for a mock online shop called "Omni Store." It is build with React.js, using React Router for page routing. Styles are dones with Tailwind CSS and [daisyUI]("https://daisyui.com/") (a component library built on top of Tailwind). The the store content is served via the [Fake Store API]("https://fakestoreapi.com/").
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Users can browse a variety of product categories and add items to their cart. These items (with their prices and quantities) are displayed on the Cart page, along with total price and quantity of items. Users can also delete items from the Cart page.
+
+## Installation
+
+This web app requires NPM. To install, clone the repository, move to the directory, and from the terminal type:
+
+```
+npm install
+```
+
+## Roadmap
+
+- More fine-grain paging. That is, individual pages for distinct product categories.
+- Light and dark mode switching.
+- Local storeage for the shopping cart.
