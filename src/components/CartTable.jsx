@@ -6,7 +6,10 @@ import { FaRegTrashCan } from "react-icons/fa6";
 const CartTable = () => {
   const [cart, setCart] = useContext(CartContext);
 
-  const totalPrice = cart.reduce((acc, item) => acc + item.price, 0);
+  const totalPrice = cart.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
   const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
 
   return (
