@@ -7,6 +7,7 @@ const Card = (props) => {
 
   const handleClick = (addedItem) => {
     const newItem = { ...addedItem, quantity: 1, id: nanoid() };
+    // Checks if the item is a duplicate and updates the quantity if so
     if (cart.some((item) => item.name === newItem.name)) {
       const updatedCart = cart.map((item) => {
         if (item.name === newItem.name) {
@@ -19,6 +20,7 @@ const Card = (props) => {
       setCart(updatedCart);
       return;
     }
+    // Updates cart if item not a duplicate
     setCart(cart.concat(newItem));
   };
 
