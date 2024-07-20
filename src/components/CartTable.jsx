@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import CartContext from "../CartContext";
 import TableRow from "./TableRow";
+import { FaRegTrashCan } from "react-icons/fa6";
 
 const CartTable = () => {
   const [cart, setCart] = useContext(CartContext);
@@ -30,13 +31,13 @@ const CartTable = () => {
                 quantity={item.quantity}
                 price={item.price}
                 id={item.id}
-                delText="🗑️"
+                delText={<FaRegTrashCan />}
               />
             );
           })}
           {/* Totals */}
           <TableRow
-            title="Order Total"
+            name="Order Total"
             quantity={totalQuantity}
             price={totalPrice}
             delText=""

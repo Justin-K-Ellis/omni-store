@@ -14,8 +14,13 @@ const TableRow = (props) => {
       <td>{props.name}</td>
       <td>{props.quantity}</td>
       <td>${props.price}</td>
-      <td>
-        <button onClick={() => handleDelete(props.id)}>{props.delText}</button>
+      <td className="flex flex-row justify-center">
+        <button
+          className="text-accent hover:text-lg"
+          onClick={() => handleDelete(props.id)}
+        >
+          {props.delText}
+        </button>
       </td>
     </tr>
   );
