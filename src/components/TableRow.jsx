@@ -14,9 +14,9 @@ const TableRow = (props) => {
       <td>{props.name}</td>
       <td>{props.quantity}</td>
       <td>${props.price}</td>
-      <td className="flex flex-row justify-center">
+      <td className="mx-auto text-center">
         <button
-          className="text-accent hover:text-lg"
+          className="text-accent text-lg hover:text-2xl"
           onClick={() => handleDelete(props.id)}
         >
           {props.delText}
