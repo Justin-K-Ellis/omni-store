@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import CartContext from "../CartContext";
 import { nanoid } from "nanoid";
+import { Toaster, toast } from "sonner";
 
 const Card = (props) => {
   const [cart, setCart] = useContext(CartContext);
@@ -18,10 +19,16 @@ const Card = (props) => {
         }
       });
       setCart(updatedCart);
+      toast.success("Added to cart", {
+        duration: 1500,
+      });
       return;
     }
     // Updates cart if item not a duplicate
     setCart(cart.concat(newItem));
+    toast.success("Added to cart", {
+      duration: 1500,
+    });
   };
 
   return (
@@ -47,6 +54,7 @@ const Card = (props) => {
             >
               Add to Cart
             </button>
+            <Toaster richColors position="top-right" />
           </div>
         </div>
       </div>
